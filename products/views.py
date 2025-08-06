@@ -1,11 +1,11 @@
-# from django.shortcuts import render
-# from rest_framework.views import APIView
+from django.shortcuts import render
+from rest_framework.views import APIView
 from rest_framework.response import Response
-# from rest_framework import status
+from rest_framework import status
 from rest_framework.decoraters import api_view
 
-# from .models import Item
-# from .serializers import ItemSerializer
+from .models import Item
+from .serializers import ItemSerializer
 
 # '''
 # NOTE: Conside this as a reference and follow this same coding structure or format to work on you tasks
@@ -42,3 +42,7 @@ def hardcoded_menu(request):
         },
     ]
     return Response(menu)
+
+
+    def home(request):
+        return render(request, 'products/home.html')
