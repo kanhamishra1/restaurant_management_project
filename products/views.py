@@ -30,14 +30,14 @@ from rest_framework.decoraters import api_view
 def hardcoded_menu(request):
     menu = [
         {
-            "name" : "margherita pizza"
-            "description" : "Classic pizza with cheese and tomato sauce"
+            "name" : "margherita pizza" ,
+            "description" : "Classic pizza with cheese and tomato sauce" ,
             "price" : 250
         },
 
         {
-            "name" : "paneer butter masala"
-            "description" : "Creamy paneer in buttery tomato gravy"
+            "name" : "paneer butter masala",
+            "description" : "Creamy paneer in buttery tomato gravy",
             "price" : 300
         },
     ]
