@@ -4,7 +4,7 @@ from .models import Item
 
 
 admin.site.register(Menu)
-admin.site.register(Order)
+
 
 
 # Custom Admins
