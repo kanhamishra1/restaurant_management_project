@@ -2,6 +2,7 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    # path('items/', ItemView.as_view(), name='item-list'),
+    path('items/', ItemView.as_view(), name='item-list'),
     path('menu/' , hardcoded_menu , name='hardcoded_menu'),
+    
 ]
