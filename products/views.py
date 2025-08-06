@@ -7,6 +7,9 @@ from rest_framework.decoraters import api_view
 from .models import Item
 from .serializers import ItemSerializer
 
+
+def home(request):
+    return render(request, 'products/home.html')
 # '''
 # NOTE: Conside this as a reference and follow this same coding structure or format to work on you tasks
 # '''
@@ -43,6 +46,3 @@ def hardcoded_menu(request):
     ]
     return Response(menu)
 
-
-    def home(request):
-        return render(request, 'products/home.html')
