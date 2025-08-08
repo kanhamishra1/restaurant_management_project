@@ -7,11 +7,11 @@ body {
 }
 
 .container {
-    max-width: 90px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 40px 20px;
     background-color: white;
-    box-shadow: 0 0 10px rgba(red, green, blue, alpha);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
