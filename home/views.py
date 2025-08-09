@@ -7,3 +7,6 @@ def home_view(request):
         'restaurant_name': settings.RESTAURANT_NAME
     }
     return render(request, 'home/home.html', context)
+
+def about_view(request):
+    return render(request, 'home/about.html')
