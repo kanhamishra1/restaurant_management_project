@@ -43,6 +43,12 @@ def hardcoded_menu(request):
             "description" : "Creamy paneer in buttery tomato gravy",
             "price" : 300
         },
+
+        {
+            "name" : "cold cofee" ,
+            "description" : "A strong and sweet coffee for relaxation",
+            "price" : 70
+        }
     ]
     return Response(menu)
 
