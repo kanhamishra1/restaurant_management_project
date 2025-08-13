@@ -29,26 +29,12 @@ def home(request):
 #             return Response(serializer.data, status=status.HTTP_201_CREATED)
 #         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['GET'])
-def hardcoded_menu(request):
-    menu = [
-        {
-            "name" : "margherita pizza" ,
-            "description" : "Classic pizza with cheese and tomato sauce" ,
-            "price" : 250
-        },
-
-        {
-            "name" : "paneer butter masala",
-            "description" : "Creamy paneer in buttery tomato gravy",
-            "price" : 300
-        },
-
-        {
-            "name" : "cold cofee" ,
-            "description" : "A strong and sweet coffee for relaxation",
-            "price" : 70
-        }
+def menu_item_view(request):
+    
+    menu_items = [
+        {"name" : "Veg Burger", "price": 120},
+        {"name" : "Paneer Pizza", "price": 250},
+        {"name" : "Cold Coffee", "price": 80},
     ]
-    return Response(menu)
-
+     
+     return render (request,'home/menu.html',{"menu_items" : menu_items})
