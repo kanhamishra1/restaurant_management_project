@@ -29,7 +29,7 @@ def home(request):
 #             return Response(serializer.data, status=status.HTTP_201_CREATED)
 #         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-def menu_item_view(request):
+def menu_items_view(request):
     
     menu_items = [
         {"name" : "Veg Burger", "price": 120},
