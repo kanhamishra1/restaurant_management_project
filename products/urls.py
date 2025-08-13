@@ -4,6 +4,6 @@ from .views import *
 urlpatterns = [
     path('', home, name='home'),
     path('items/', ItemView.as_view(), name='item-list'),
-    path('menu/' , hardcoded_menu , name='hardcoded_menu'),
+    path('menu/' ,  , name='hardcoded_menu'),
     
 ]
