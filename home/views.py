@@ -9,9 +9,8 @@ def home_view(request):
     return render(request, 'home/home.html', context)
 
 def demo_home_page(request):
-    context = {
-        'restaurant_name': ""
-    }
+    restaurant_name = "Testy Bites"
+    return render(request, 'home/home1.html', {'restaurant_name' : restaurant_name})
 
 def about_view(request):
     return render(request, 'home/about.html')
