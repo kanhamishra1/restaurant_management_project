@@ -14,3 +14,6 @@ def demo_home_page(request):
 
 def about_view(request):
     return render(request, 'home/about.html')
+
+def reservation(request):
+    return render(render, 'home/reservation.html')
