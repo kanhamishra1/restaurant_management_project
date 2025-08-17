@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.shortcuts import render
+from django.http import HttpResponseServerError
 
 
 def home_view(request):
@@ -16,4 +17,11 @@ def about_view(request):
     return render(request, 'home/about.html')
 
 def reservation(request):
-    return render(render, 'home/reservation.html')
+    try:
+        return render(request, 'home/reservation.html')
+    except Exception as e:
+        # Log the error for debugging
+        print(f"Error in reservation view: {e}")
+        return HttpResponseServerError(
+            "<h1>Something went wrong!</h1><p>Please try again later</p>"
+        )
