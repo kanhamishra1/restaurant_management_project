@@ -27,7 +27,7 @@ def reservation(request):
             "<h1>Something went wrong!</h1><p>Please try again later</p>"
         )
 
-def feddback_view(request):
+def feedback_view(request):
     if request.method == "POST":
         form = Feedbackform(request.POST)
         if form.is_valid():
