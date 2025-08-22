@@ -1,5 +1,22 @@
 
-by this 
-<footer style="text-align: center; padding: 20px; background-color: #222; color: #fff;">
-    &copy; {{ current_year }} Restaurant Management
-</footer> 
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Restaurant{% endblock %}</title>
+    </head>
+    <body>
+
+        <!-- page content -->
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <p>&copy; 2025 by Restaurant. All rights reserved.</p>
+        </footer>
+
+    </body>
+</html>
