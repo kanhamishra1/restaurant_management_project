@@ -1,5 +1,5 @@
 {% load static %}
-# Added css styiling
+<!-- # Added css styiling -->
 
 <!DOCTYPE html>
     <html lang="en">
@@ -15,6 +15,13 @@
         <h1 style="font-size: 48px; margin-bottom: 10px;">Welcome to {{ restaurant_name }} </h1>
         <p style="font-size: 20px; margin: 0;"> Enjoy Delicious meals made with love</p>
             </div>
+
+            <!-- // for search bar -->
+            <form method="GET" action="">
+                <input type="text" name="q" placeholder="search menu items......"/>
+
+                <button type="submit">Search</button>
+            </form>
 
             <div style = "text-align: center; padding: 10px; background-color: #333;">
                 <a href="/" style = "color: white; margin-right: 20px; text-decoration: none;">Home</a>
