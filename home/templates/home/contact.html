@@ -1,0 +1,19 @@
+<form id="contactForm" method="post">
+    {% csrf_token %}
+    <input type="text" id="name" name="name" placeholder="Your Name">
+    <input type="email" id="email" name="email" placeholder="Your EMail">
+    <textarea id="message" name="message" placeholder="Your Message"></textarea>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+
+    if (!name || !email) {
+    alert("please fill in both Name and Email fields. ");
+    event.preventDefault();
+    }
+    });
+    </script>
