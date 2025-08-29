@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.shortcuts import render, redirect
 from django.http import HttpResponseServerError
-from .forms import Feedbackform
+from .forms import 
 
 
 def home_view(request):
