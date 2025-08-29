@@ -8,10 +8,13 @@
 <body>
     <h1> Our Menu </h1>
     <ul>
-        {% for item in menu_items %}
+        {% for item in items %}
 
         <li>
-            {{ item.name }} - rs{{ item.price }}
+            <strong>
+            {{ item.name }} </strong>- rs{{ item.price }}
+            <small>{{ item.description }}</small>
+
         </li>
         {% endfor %}
     </ul>
