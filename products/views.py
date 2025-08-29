@@ -3,6 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
+from .models import MenuItem
 
 from .models import Item
 from .serializers import ItemSerializer
@@ -38,3 +39,7 @@ def menu_items_view(request):
     ]
      
      return render (request,'home/menu.html',{"menu_items" : menu_items})
+
+def menu_view(request):
+    items = MenuItem.objects.all()
+    return render(request, 'products/menu.html', {'items': items})
