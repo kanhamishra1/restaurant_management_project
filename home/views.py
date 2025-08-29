@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.shortcuts import render, redirect
 from django.http import HttpResponseServerError
-from .forms import 
+from .forms import ContactForm
 
 
 def home_view(request):
@@ -27,14 +27,14 @@ def reservation(request):
             "<h1>Something went wrong!</h1><p>Please try again later</p>"
         )
 
-def feedback_view(request):
+def ContactForm(request):
     if request.method == "POST":
         form = Feedbackform(request.POST)
         if form.is_valid():
             form.save() #Save feedback into DB
-            return redirect('feedback')
+            return redirect('home')
 
     else:
-        form = Feedbackform()
+        form = ContactForm()
 
-    return render(request, 'home/feedback.html', {'form': form})
+    return render(request, 'home/home.html', {'form': form})
