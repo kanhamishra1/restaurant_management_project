@@ -7,5 +7,5 @@ urlpatterns = [
     path('about/', views.about_view, name = 'about'),
     path('reservation/', views.reservation, name = 'reservation'),
     path('feedback/',views.feedback_view),
-    path('contact', views.)
+    path('contact/', views.ContactForm, name = 'contactform'),
 ]
