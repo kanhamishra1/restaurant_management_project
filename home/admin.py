@@ -1,3 +1,5 @@
 from django.contrib import admin
-from .models import Re
+from .models import RestaurantLocation
+
+admin.site.register(RestaurantLocation)
 
