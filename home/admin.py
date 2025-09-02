@@ -3,6 +3,6 @@ from .models import RestaurantLocation
 
 @admin.register(RestaurantLocation)
 class RestaurantLocationAdmin(admin.ModelAdmin):
-    list_display = ()
+    list_display = ('address', 'city', 'state', 'zip_code')
 
 
