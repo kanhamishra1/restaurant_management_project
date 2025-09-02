@@ -17,4 +17,3 @@ class RestaurantLocation(models.Model):
     def __str__(self):
         return f"{self.addrres}, {self.city}, {self.state} - {self.Zip_code}"
 
-class Contact
