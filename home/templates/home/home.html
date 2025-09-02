@@ -70,6 +70,12 @@
                         </iframe>
                     </div>
                 </section>
+
+            {% if restaurant %}
+            <div class="restaurant-info">
+                <h2>{{ restaurant.name }}</h2>
+                <p><strong>Address:</strong> {{ restaurant.address }}</p>
+                {% if restaurant.%}
                 {% include "footer.html" %}
            
         </body>
