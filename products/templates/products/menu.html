@@ -9,6 +9,13 @@
     <h1> Our Menu </h1>
     <ul>
         {% for item in items %}
+        <div style="margin-bottom:20px;">
+            {% if item.image %}
+                <img src="{{ item.image.url }}" alt="{{ item.name }}" width="200">
+            {% endif %}
+
+            
+
 
         <li>
             <strong>
