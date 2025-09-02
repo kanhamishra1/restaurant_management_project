@@ -2,7 +2,13 @@ from django.conf import settings
 from django.shortcuts import render, redirect
 from django.http import HttpResponseServerError
 from .forms import ContactForm
-from .models import 
+from .models import RestaurantLocation
+
+
+
+def home(request):
+    restaurant = RestaurantLocation.objects.first()
+    return render(request, 'home/home.html', {'restaurant': restaurant})
 
 
 def home_view(request):
