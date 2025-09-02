@@ -76,7 +76,11 @@
                 <h2>{{ restaurant.name }}</h2>
                 <p><strong>Address:</strong> {{ restaurant.address }}</p>
                 {% if restaurant.email %}
-                    <p> 
+                    <p> <strong> email: </strong> {{ restaurant.email }} </p>
+                    {% endif %}
+            </div>
+            {% endif %}
+            
                 {% include "footer.html" %}
            
         </body>
