@@ -2,6 +2,7 @@ from django.conf import settings
 from django.shortcuts import render, redirect
 from django.http import HttpResponseServerError
 from .forms import ContactForm
+from .models import 
 
 
 def home_view(request):
