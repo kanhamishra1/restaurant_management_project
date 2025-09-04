@@ -30,7 +30,7 @@
 
             <h2>Contact US</h2>
             <form method="post">
-                { % csrf_token %}
+                {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit">Submit</button>
             </form>
@@ -53,12 +53,13 @@
               </div>
 
               <!-- <Restaurant Address  section> -->
-                <section class="address">
+                <section class="address" style="text-align: center; padding: 20px;">
                     <h2>Our Location</h2>
-                    <p>Testty Bites</p>
+                    <p><strong>{{ restaurant.name }}</strong></p>
+                    <p>{{ restaurant.address  }}, {{ restaurant.city }}, {{ restaurant.state }} - {{ restaurant.zip_code}}</p>
 
                     <!-- <embedded Google map> -->
-                    <div style="width : 100; height : 400;">
+                    <div style="width : 100%; height : 400px;">
                         <iframe
                          src="https://www.google.com/maps......THIS WILL CONTAIN THE ACTUAL SRC"
                          width="100%"
@@ -71,16 +72,9 @@
                     </div>
                 </section>
 
-            {% if restaurant %}
-            <div class="restaurant-info">
-                <h2>{{ restaurant.name }}</h2>
-                <p><strong>Address:</strong> {{ restaurant.address }}</p>
-                {% if restaurant.email %}
-                    <p> <strong> email: </strong> {{ restaurant.email }} </p>
-                    {% endif %}
-            </div>
-            {% endif %}
+                {% endif %}
             
+            <!-- footer -->
                 {% include "footer.html" %}
            
         </body>
