@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponseServerError
 from .forms import ContactForm
 from .models import RestaurantLocation
-from .models import MenuItem
+from products.models import MenuItem
 
 
 
@@ -46,3 +46,19 @@ def ContactForm(request):
         form = ContactForm()
 
     return render(request, 'home/contact.html', {'form': form})
+
+def search(request):
+    restaurant = Restaurant.objects.first()
+    query = request.GET.get("q")
+
+    if query:
+        menu_items = MenuItem.objects.filter(name_icontains=query) # case insensitive search
+    else:
+        menu_items = MenuItem.objects.all()
+
+    context = {
+        "restaurant": restaurant,
+        "menu_items": menu_items,
+        "query": query,
+    }
+    return render(request, "home.html", context)
