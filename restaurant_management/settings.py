@@ -22,7 +22,7 @@ EMAIL_HOST_USER = "TestyBites@gmail.com"
 EMAIL_HOST_PASSWORD = "TeSTyBitES18952701"
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-
+# For adding item pic in menu
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
