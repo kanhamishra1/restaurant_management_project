@@ -17,11 +17,28 @@
             </div>
 
             <!-- // for search bar -->
-            <form method="GET" action="">
-                <input type="text" name="q" placeholder="search menu items......"/>
+            <form method="GET" action="" class="search-form">
+                
+                <input type="text" name="q" placeholder="search menu items......" value="{{ querydefault:''}}">
+
 
                 <button type="submit">Search</button>
             </form>
+
+            <hr>
+            <h2>Menu Items</h2>
+            <ul>
+                {% if menu_items %}
+                {% for item in menu_items %}
+                <li>
+                    <strong>{{ item.name }}</strong> - {{ item.description }} (rs{{ item.price }})
+                </li>
+                {% endfor %}
+                {% else %}
+                <p>No items found.</p>
+                {% endif %}
+            </ul>
+            
 
             <div style = "text-align: center; padding: 10px; background-color: #333;">
                 <a href="/" style = "color: white; margin-right: 20px; text-decoration: none;">Home</a>
