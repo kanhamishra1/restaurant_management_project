@@ -13,6 +13,15 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 
+# for email
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 578
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "TestyBites@gmail.com"
+EMAIL_HOST_PASSWORD = "TeSTyBitES18952701"
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
