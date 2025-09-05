@@ -90,6 +90,12 @@
                 </section>
 
                 {% endif %}
+                <h2>Contact US</h2>
+           <form method="post"
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Send</button>
+            </form>
             
             <!-- footer -->
                 {% include "footer.html" %}
