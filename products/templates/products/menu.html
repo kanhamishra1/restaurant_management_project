@@ -7,9 +7,9 @@
 
 <body>
     <h1> Our Menu </h1>
-    <ul>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
         {% for item in items %}
-        <div style="margin-bottom:20px;">
+        <div style="background: white; padding: 15px; border-radious: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;">
             {% if item.image %}
                 <img src="{{ item.image.url }}" alt="{{ item.name }}" width="200">
             {% endif %}
