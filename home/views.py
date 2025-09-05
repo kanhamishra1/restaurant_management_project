@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.shortcuts import render, redirect
 from django.http import HttpResponseServerError
-from .forms import ContactForm
+from .forms import ContactForm,Email
 from .models import RestaurantLocation
 from products.models import MenuItem
 
