@@ -14,6 +14,8 @@ class RestaurantLocation(models.Model):
     state = models.CharField(max_length=100)
     zip_code = models.CharField(max_length=10)
 
+    opening_hours = models.jSONField(default=dict)
+
     def __str__(self):
         return f"{self.addrres}, {self.city}, {self.state} - {self.Zip_code}"
 
