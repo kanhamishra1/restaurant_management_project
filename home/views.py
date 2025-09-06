@@ -9,7 +9,16 @@ from products.models import MenuItem
 
 def home(request):
     restaurant = RestaurantLocation.objects.first()
-    return render(request, 'home/home.html', {'restaurant': restaurant})
+
+
+    restaurant ={
+        "name" = "Testy Bites",
+        "opening_hours" = {
+            "Mon-Fri": "11am - 9pm",
+            "Sat-sun": "10am - 10pm"
+        }
+    }
+    return render(request, 'home.html', {'restaurant': restaurant})
 
 
 def home_view(request):
