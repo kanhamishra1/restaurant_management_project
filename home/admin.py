@@ -5,4 +5,3 @@ from .models import RestaurantLocation
 class RestaurantLocationAdmin(admin.ModelAdmin):
     list_display = ('address', 'city', 'state', 'zip_code')
 
-
