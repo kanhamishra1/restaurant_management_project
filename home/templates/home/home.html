@@ -90,7 +90,22 @@
                 </section>
 
                 {% endif %}
-                <h2>Contact US</h2>
+
+                <!-- opening hour section -->
+                {% if restaurant.opening_hours %}
+                <section style="text-align: center; margin: 20px 0;">
+                    <h3>Opening Hours</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        {% for day, hours in restaurant.opening_hours.items %}
+                        <li><strong>{{ day }}</strong>: {{ hours }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+                {% endif %}
+
+
+        <!-- Contact us section -->
+          <h2>Contact US</h2>
            <form method="post"
                 {% csrf_token %}
                 {{ form.as_p }}
