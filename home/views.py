@@ -7,6 +7,7 @@ from .models import RestaurantLocation
 from products.models import MenuItem
 
 
+# This is home page section
 def home(request):
     restaurant = RestaurantLocation.objects.first()
 
@@ -21,10 +22,12 @@ def home(request):
     return render(request, 'home/home.html', context)
 
 
+# This is for About page
 def about_view(request):
     return render(request, 'home/about.html')
 
 
+# This is for reservation section
 def reservation(request):
     try:
         return render(request, 'home/reservation.html')
@@ -32,7 +35,7 @@ def reservation(request):
         print(f"Error in reservation view: {e}")
         return HttpResponseServerError("<h1>Something went wrong!</h1><p>Please try again later</p>")
 
-
+# This is feedback section
 def feedback_view(request):
     if request.method == "POST":
         form = FeedbackForm(request.POST)
@@ -44,7 +47,7 @@ def feedback_view(request):
 
     return render(request, 'home/contact.html', {'form': form})
 
-
+# This is for menu item search
 def search(request):
     restaurant = RestaurantLocation.objects.first()
     query = request.GET.get("q", "")
@@ -60,7 +63,7 @@ def search(request):
     }
     return render(request, "home/home.html", context)
 
-
+# This is for contact section
 def email_contact_view(request):
     restaurant = RestaurantLocation.objects.first()
     menu_items = MenuItem.objects.all()

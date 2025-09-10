@@ -1,5 +1,5 @@
 # This is the About Us Section
-
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,9 +23,26 @@
         <div style="text-align: center;">
             <img src="{% static 'home/restaurant.jpg' %}" alt="Our Restaurant" style="max-width: 600px; width: 90%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
         </div>
+        <section class="mt-4">
+            <h2>Our History</h2>
+            <p>
+                Founded in 1995, our restaurant started as a small family-owned eatery with a passion
+            for fresh ingredients and authentic recipes. Over the years, we have grown into a 
+            favorite dining destination for food lovers across the city.
+            </p>
+            </section>
 
-        <div styyle = "text-align: center; margin-top: 40px;">
-            <a href="/" style="font-size: 18px; text-decoration: none; color: #007BFF;"> <-- Back to Home </a>
+            <section class="mt-4">
+                <h2>Our Mission</h2>
+                <p>
+                    Our mission is simple — to deliver high-quality, delicious meals that bring people
+            together. We believe in sustainability, supporting local farmers, and creating
+            memorable dining experiences for every guest.
+            </p>
+            </section>
+
+        <div style = "text-align: center; margin-top: 40px;">
+            <a href="/" style="font-size: 18px; text-decoration: none; color: #007BFF;">  Back to Home </a>
             </div>
 
             {% include "footer.html" %}

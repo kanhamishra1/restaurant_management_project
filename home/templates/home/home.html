@@ -18,6 +18,14 @@
         <p style="font-size: 16px; margin: 5px 0; font-weight: bold;">🛒 Cart: {{ cart_count }} items</p>
     </div>
 
+    <!-- about page link -->
+    <div style="text-align:center; margin-top: 20px;">
+    <a href="{% url 'about' %}" 
+       style="background-color:#007BFF; color:white; padding:10px 20px; border-radius:5px; text-decoration:none;">
+        Learn More About Us
+    </a>
+</div>
+
     <!-- Search Bar -->
     <form method="GET" action="" class="search-form" style="text-align: center; margin: 20px;">
         <input type="text" name="q" placeholder="Search menu items..." value="{{ query|default:'' }}">
@@ -44,7 +52,7 @@
         {% endif %}
     </ul>
 
-    
+
 
     <!-- Address Section -->
     <section class="address" style="text-align: center; padding: 20px;">
