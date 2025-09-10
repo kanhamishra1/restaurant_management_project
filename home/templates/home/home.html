@@ -77,6 +77,17 @@
 </div>
 {% endif %}
 
+<!-- For displaying Restaurant phone number -->
+ {% if restaurant and restaurant.phone_number %}
+<div style="text-align: center; margin-top: 10px;">
+    <p style="font-size: 18px; font-weight: bold;">
+        📞 Call Us: <a href="tel:{{ restaurant.phone_number }}" style="color: #007BFF; text-decoration: none;">
+            {{ restaurant.phone_number }}
+        </a>
+    </p>
+</div>
+{% endif %}
+
 
     <!-- Opening Hours -->
     {% if restaurant.opening_hours %}
