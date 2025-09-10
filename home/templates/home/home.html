@@ -69,6 +69,15 @@
         </div>
     </section>
 
+    <!-- for displaying the logo -->
+     {% if restaurant and restaurant.logo %}
+<div style="text-align:center; margin: 20px 0;">
+    <img src="{{ restaurant.logo.url }}" alt="Restaurant Logo" 
+         style="max-width: 150px; border-radius: 10px;">
+</div>
+{% endif %}
+
+
     <!-- Opening Hours -->
     {% if restaurant.opening_hours %}
     <section style="text-align: center; margin: 20px 0;">

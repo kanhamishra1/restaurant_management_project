@@ -13,9 +13,8 @@ class RestaurantLocation(models.Model):
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
     zip_code = models.CharField(max_length=10)
-
-    
+    logo = models.ImageField(upload_to='logos/', blank=True, null=True)
 
     def __str__(self):
-        return f"{self.addrres}, {self.city}, {self.state} - {self.Zip_code}"
+        return self.name
 

@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponseServerError
 from django.core.mail import send_mail
 from .forms import ContactForm, FeedbackForm  
-from .models import RestaurantLocation
+from .models import RestaurantLocation,RestaurantInfo
 from products.models import MenuItem
 
 
