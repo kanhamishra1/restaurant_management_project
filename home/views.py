@@ -7,6 +7,7 @@ from .models import RestaurantLocation,RestaurantInfo
 from products.models import MenuItem
 
 
+
 # This is home page section
 def home(request):
     restaurant = RestaurantLocation.objects.first()

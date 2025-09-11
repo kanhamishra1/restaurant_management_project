@@ -10,7 +10,7 @@ class ContactForm(forms.Form):
 
     def clean_message(self):
         message = self.cleaned_data.get("message")
-        if len(massage) < 10:
+        if len(message) < 10:
             raise forms.ValidationError("Message must be at least 10 character long.")
         return message
          
