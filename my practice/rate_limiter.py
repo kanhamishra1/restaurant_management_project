@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
     for i in range(5):
         if limiter.is_allowed(user):
-            print(f"Request {i+1} ✅ allowed")
+            print(f"Request {i+1} allowed")
         else:
-            print(f"Request {i+1} ❌ blocked")
+            print(f"Request {i+1}  blocked")
         time.sleep(2)
