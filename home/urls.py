@@ -8,4 +8,5 @@ urlpatterns = [
     path('reservation/', views.reservation, name = 'reservation'),
     path('feedback/',views.feedback_view),
     path('contact/', views.ContactForm, name = 'contactform'),
+    path('menu-categories/', MenuCategoryListView.as_view(), name='menu-categories'),
 ]

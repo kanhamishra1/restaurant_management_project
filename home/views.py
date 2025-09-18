@@ -3,9 +3,15 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponseServerError
 from django.core.mail import send_mail
 from .forms import ContactForm, FeedbackForm  
-from .models import RestaurantLocation,RestaurantInfo
+from .models import RestaurantLocation,RestaurantInfo,MenuCategory
 from products.models import MenuItem
+from rest_framework.generics import ListAPIView
+from .serializers import MenuCategorySerializer
 
+
+class MenuCategoryListView(ListAPIView):
+    queryset = MenuCategory.objects.all()
+    serializer_class = MenuCategorySerializer
 
 
 # This is home page section
