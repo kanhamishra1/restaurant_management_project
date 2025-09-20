@@ -1,4 +1,7 @@
+# This is session_manager section
+
 import time
+
 import uuid  # To generate unique session IDs
 
 class SessionManager:
